@@ -11,7 +11,7 @@ function Hero(props){
        
       </video>
        <div className="hero-container-play">
-        <img src={require("../../assets/img/logo/logo1.png")} alt="" className="img-fluid"/>
+        <img src={require("../../assets/img/logo/logo1.png")} alt="" className="img-fluid" />
         
 
          <div id= "play2" className="containerplay2 img-fluid">

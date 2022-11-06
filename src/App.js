@@ -13,18 +13,18 @@ import '../src/assets/vendor/swiper/swiper-bundle.min.css';
 //compinenetes 
 import Navbar from './components/navbar/Navbar';
 import Nosotros from './components/Nosotros';
-import Valores from './components/Valores';
+import Cuentas from './components/Cuentas';
 import Hero from './components/navbar/Hero';
+import Valores from './components/Valores';
 
 function App() {
   return (
     
       <div className="App">
       <Hero/> 
-      <Navbar/>
-      
+      <Navbar/>     
       <Nosotros/>
-     
+      <Cuentas/>
       <Valores/>
     
     

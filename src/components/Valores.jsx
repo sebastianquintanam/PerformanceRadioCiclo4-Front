@@ -1,28 +1,33 @@
 function Valores(props){
     return(
-        <section id="counts" className="counts">
+        <section id="our-values" className="our-values">
         <div className="container">
   
-          <div className="row counters">
-  
-            <div className="col-lg-3 col-6 text-center">
-              <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1" className="purecounter"></span>
-              <p>Locutores</p>
+          <div className="row">
+            <div className="col-md-6 d-flex align-items-stretch">
+              <div className="card">
+                <video autoPlay muted loop poster="cake.jpg" src={require("../../src/assets/video/video1.mp4")} className="video">
+                  {/* <source  type="video/webm"/> */}
+                  Your browser does not support the video tag.
+                </video>
+                <div className="card-body">
+                  <h5 className="card-title"><a href="">Nuestra Misión</a></h5>
+                  <p className="card-text">Difundir contenido musical, cultural e informativo de alta calidad, que incentive la libre expresión de las ideas, así como la exploración de nuevas formas radiofónicas que contribuyan emocionalmente al bienestar de nuestros oyentes. </p>
+                </div>
+              </div>
             </div>
+            <div className="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+              <div className="card">
+                <video autoPlay muted loop poster="cake.jpg" src={require("../../src/assets/video/video2.mp4")} className="video">
+                  {/* <source type="video/webm"/> */}
+                  Your browser does not support the video tag.
+                </video>
+                <div className="card-body">
+                  <h5 className="card-title"><a href="">Nuestra Visión</a></h5>
+                  <p className="card-text">Somos una empresa radiofónica referente, que genera confianza y credibilidad en nuestros oyentes, por la calidad, compromiso e innovación a través de nuestros programas, que cuenta con un equipo autoexigente y capacitado para expandirse en el sector.</p>
+                </div>
+              </div>
   
-            <div className="col-lg-3 col-6 text-center">
-              <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" className="purecounter"></span>
-              <p>Paises</p>
-            </div>
-  
-            <div className="col-lg-3 col-6 text-center">
-              <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1" className="purecounter"></span>
-              <p>Horas de transmisión continua</p>
-            </div>
-  
-            <div className="col-lg-3 col-6 text-center">
-              <span data-purecounter-start="0" data-purecounter-end="1582" data-purecounter-duration="1" className="purecounter"></span>
-              <p>Radio Escuchas</p>
             </div>
   
           </div>
