@@ -1,24 +1,36 @@
 import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
+import '../src/css/style.css';
+import '../src/assets/vendor/bootstrap-icons/bootstrap-icons.css';
+import '../src/assets/vendor/bootstrap/css/bootstrap-reboot.min.css';
+import '../src/assets/vendor/boxicons/css/boxicons.min.css';
+import '../src/assets/vendor/glightbox/css/glightbox.min.css';
+import '../src/assets/vendor/remixicon/remixicon.css';
+import '../src/assets/vendor/swiper/swiper-bundle.min.css';
+
+  
+
+//compinenetes 
+import Navbar from './components/navbar/Navbar';
+import Nosotros from './components/Nosotros';
+import Valores from './components/Valores';
+import Hero from './components/navbar/Hero';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+      <div className="App">
+      <Hero/> 
+      <Navbar/>
+      
+      <Nosotros/>
+     
+      <Valores/>
+    
+    
+     
     </div>
+    
   );
 }
 
