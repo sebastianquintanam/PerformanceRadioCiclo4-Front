@@ -19,7 +19,10 @@ import Valores from './components/Valores';
 import Servicios from './components/Servicios';
 import Footer from './components/Footer';
 import Home from './components/Home';
+import Precios from './components/Precios';
 import { Route, Routes } from 'react-router-dom';
+import Testimonios from './components/Testimonios';
+import Preguntas from './components/Preguntas';
 
 function App() {
 
@@ -29,8 +32,8 @@ function App() {
       <Hero/> 
       <Navbar/>
       <Routes>  
-        <Route path="/" element={<Home />}/>
-        <Route path="/servicios" element={<Servicios/>}/>
+        <Route path="/" element={<><Home /><Preguntas/> <Testimonios/></>}/>
+        <Route path="/servicios" element={<><Servicios/> <Precios/></>}/>
         <Route path="/acerca" element={<> <Acerca/> <Cuentas/> <Valores /></>}/>
 
       </Routes>  
