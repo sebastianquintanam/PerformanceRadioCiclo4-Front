@@ -8,25 +8,39 @@ import '../src/assets/vendor/glightbox/css/glightbox.min.css';
 import '../src/assets/vendor/remixicon/remixicon.css';
 import '../src/assets/vendor/swiper/swiper-bundle.min.css';
 
-  
+//  import '../src/assets/js/playbtn.js'; 
 
 //compinenetes 
 import Navbar from './components/navbar/Navbar';
-import Nosotros from './components/Nosotros';
+import Acerca from './components/Acerca';
 import Cuentas from './components/Cuentas';
 import Hero from './components/navbar/Hero';
 import Valores from './components/Valores';
+import Servicios from './components/Servicios';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
+
   return (
-    
+
       <div className="App">
       <Hero/> 
-      <Navbar/>     
-      <Nosotros/>
-      <Cuentas/>
-      <Valores/>
+      <Navbar/>
+      <Routes>  
+        <Route path="/" element={<Home />}/>
+        <Route path="/servicios" element={<Servicios/>}/>
+        <Route path="/acerca" element={<> <Acerca/> <Cuentas/> <Valores /></>}/>
+
+      </Routes>  
+     
+     
+
+      
     
+      <Footer/>
+
     
      
     </div>

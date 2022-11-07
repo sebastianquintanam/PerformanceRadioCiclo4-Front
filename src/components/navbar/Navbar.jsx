@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 function Navbar(props){
     return(
@@ -13,19 +14,19 @@ function Navbar(props){
       
             <nav id="navbar" className="navbar order-last order-lg-0">
               <ul>
-                <li><a className="nav-link scrollto active" href="#hero">Inicio</a></li>
-                <li><a className="nav-link scrollto" href="#about">Acerca de</a></li>
-                <li><a className="nav-link scrollto" href="#services">Servicios</a></li>
+                <li><Link to="/" className="nav-link scrollto active" href="#hero">Inicio</Link></li>
+                <li><Link to={"/acerca"} className="nav-link scrollto" href="#about">Acerca de</Link></li>
+                <li><Link to={"/servicios"} className="nav-link scrollto">Servicios</Link></li>
                 
                 <li><a className="nav-link scrollto" href="#team">Nuestro Equipo</a></li>
                 <li><a className="nav-link scrollto" href="#contact">Contacto</a></li>
 
-                <li className="dropdown"><span>Usuario</span> <i className="bi bi-chevron-down"></i>
+                {/* <li className="dropdown"><span>Usuario</span> <i className="bi bi-chevron-down"></i> */}
 
-                {/* <li className="dropdown"><a th:href="@{/login}"><span>Usuario</span> <i className="bi bi-chevron-down"></i></a> */}
+                <li className="dropdown"><a href="#"><span>Usuario</span> <i className="bi bi-chevron-down"></i></a>
                   <ul>
-                    {/* <li><a th:href="@{/login}">Iniciar Sesión</a></li>
-                    <li><a th:href="@{/crear}">Registro</a></li> */}
+                    <li><a href="#">Iniciar Sesión</a></li>
+                    <li><a href="#">Registro</a></li>
                 
                   </ul>
                 </li>

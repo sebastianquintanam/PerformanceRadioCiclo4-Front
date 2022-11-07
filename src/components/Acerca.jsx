@@ -1,4 +1,4 @@
-function Nosotros(props){
+function Acerca(props){
     return (
         <section id="about" className="about">
       <div className="container">
@@ -27,11 +27,11 @@ function Nosotros(props){
         </div>
 
       </div>
-      
+    
 
     </section>
-
+ 
     )
 }
 
-export default Nosotros;
+export default Acerca;

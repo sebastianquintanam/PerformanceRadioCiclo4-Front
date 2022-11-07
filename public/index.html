@@ -79,6 +79,24 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jcarousel/0.3.1/jquery.jcarousel.min.js" type="text/javascript"></script>
 
+  <script>
+
+    const audio = document.getElementById("audio");
+    const playPause = document.getElementById("play");
+    
+    playPause.addEventListener("click", () => {
+      if (audio.paused || audio.ended) {
+        playPause.querySelector(".pause-btn").classList.toggle("hide");
+        playPause.querySelector(".play-btn").classList.toggle("hide");
+        audio.play();
+      } else {
+        audio.pause();
+        playPause.querySelector(".pause-btn").classList.toggle("hide");
+        playPause.querySelector(".play-btn").classList.toggle("hide");
+      }
+    });
+    
+    </script>
 
   </body>
 </html>
