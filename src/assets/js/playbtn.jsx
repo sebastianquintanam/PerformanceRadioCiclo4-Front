@@ -1,5 +1,7 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
-
+function PlayBtn(props){
 // var audio = document.getElementById("myAudio"); 
 // // alert("Hola");
 // function playAu() { 
@@ -25,3 +27,6 @@ playPause.addEventListener("click", () => {
     playPause.querySelector(".play-btn").classList.toggle("hide");
   }
 });
+}
+
+export default PlayBtn;

@@ -8,6 +8,7 @@ import '../src/assets/vendor/glightbox/css/glightbox.min.css';
 import '../src/assets/vendor/remixicon/remixicon.css';
 import '../src/assets/vendor/swiper/swiper-bundle.min.css';
 
+
 //  import '../src/assets/js/playbtn.js'; 
 
 //compinenetes 
@@ -23,21 +24,30 @@ import Precios from './components/Precios';
 import { Route, Routes } from 'react-router-dom';
 import Testimonios from './components/Testimonios';
 import Preguntas from './components/Preguntas';
-
+import Equipo from './components/Equipo';
+import Contacto from './components/Contacto';
+import UsuariosIndex from './components/usuarios';
+import PlayBtn from './assets/js/playbtn';
+import LoginView from './components/usuarios/login';
 function App() {
 
   return (
 
       <div className="App">
       <Hero/> 
-      <Navbar/>
+      <Navbar logged={false}/>
       <Routes>  
         <Route path="/" element={<><Home /><Preguntas/> <Testimonios/></>}/>
         <Route path="/servicios" element={<><Servicios/> <Precios/></>}/>
         <Route path="/acerca" element={<> <Acerca/> <Cuentas/> <Valores /></>}/>
+        <Route path="/equipo" element={<Equipo/>}/>
+        <Route path="/contacto" element={<Contacto/>}/>
+        <Route path="/usuarios" element={<UsuariosIndex/>}/>
+        <Route path="/login" element={<LoginView/>}/>
+        <Route path="/usuarios" element={<UsuariosIndex/>}/>
 
       </Routes>  
-     
+      
      
 
       

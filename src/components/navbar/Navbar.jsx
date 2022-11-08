@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import LogButton from "./Logbutton";
 
 function Navbar(props){
     return(
@@ -18,15 +19,16 @@ function Navbar(props){
                 <li><Link to={"/acerca"} className="nav-link scrollto" href="#about">Acerca de</Link></li>
                 <li><Link to={"/servicios"} className="nav-link scrollto">Servicios</Link></li>
                 
-                <li><a className="nav-link scrollto" href="#team">Nuestro Equipo</a></li>
-                <li><a className="nav-link scrollto" href="#contact">Contacto</a></li>
+                <li><Link to={"/equipo"} className="nav-link scrollto">Nuestro Equipo</Link></li>
+                <li><Link to={"/contacto"}  className="nav-link scrollto">Contacto</Link></li>
 
                 {/* <li className="dropdown"><span>Usuario</span> <i className="bi bi-chevron-down"></i> */}
 
-                <li className="dropdown"><a href="#"><span>Usuario</span> <i className="bi bi-chevron-down"></i></a>
+                <li className="dropdown"><Link to={"/usuarios"}><span>Usuario</span> <i className="bi bi-chevron-down"></i></Link>
                   <ul>
-                    <li><a href="#">Iniciar Sesión</a></li>
-                    <li><a href="#">Registro</a></li>
+                    <li><LogButton to={"/login"} logged={props.logged}/></li>
+                    <li><Link >Iniciar Sesión</Link></li>
+                    <li><Link href="#">Registro</Link></li>
                 
                   </ul>
                 </li>

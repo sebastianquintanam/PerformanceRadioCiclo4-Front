@@ -1,6 +1,11 @@
 import ReactPlayer from 'react-player'
+import React from 'react';
+//import '../../assets/js/playbtn';
+//
+
 
 function Hero(props){
+  // this.audio = React.createRef();
     return(
         <section id="hero">
     
@@ -11,8 +16,8 @@ function Hero(props){
        
       </video>
        <div className="hero-container-play">
-        <img src={require("../../assets/img/logo/logo1.png")} alt="" className="img-fluid" />
-        
+        <img src={require("../../assets/img/logo/logo1.png")} style={{marginTop:82}} alt="" className="img-fluid" />
+       
 
          <div id= "play2" className="containerplay2 img-fluid">
             <div className="player img-fluid">
@@ -38,7 +43,7 @@ function Hero(props){
                 <div className="end img-fluid">04:30</div>
               </div>
          
-              <audio className="player__audio img-fluid" controls id="audio">
+              <audio className="player__audio img-fluid" controls id = {"audio"}>
                 
                 <source src="https://cp9.serverse.com/proxy/perfor?mp=/stream;" type="audio/mpeg" />
                 </audio>
@@ -48,7 +53,7 @@ function Hero(props){
              <i className="fas fa-backward img-fluid"></i>
            </div>
     
-           <div className="player__btn player__btn--medium blue play img-fluid" id="play">
+           <div className="player__btn player__btn--medium blue play img-fluid" id={"play"} >
              <i className="fas fa-play play-btn img-fluid"></i>
              <i className="fas fa-pause pause-btn hide img-fluid"></i>
            </div>
@@ -63,7 +68,10 @@ function Hero(props){
  </div>
 </div>
 
+
 </section>
+
+
 
     )
 }

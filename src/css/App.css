@@ -2103,3 +2103,8 @@ table {
        display: block;
        overflow-x: auto;
      }
+
+.mapa{
+  width: 100%;
+
+}
