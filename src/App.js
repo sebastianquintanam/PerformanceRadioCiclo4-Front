@@ -31,6 +31,7 @@ import PlayBtn from './assets/js/playbtn';
 import LoginView from './components/usuarios/login';
 import CreateUsuario from './components/usuarios/createUsuario';
 import ActualizarUsuario from './components/usuarios/actualizarUsuario';
+import EliminarUsuario from './components/usuarios/eliminarUsuario';
 
 function App() {
 
@@ -49,11 +50,18 @@ function App() {
         <Route path="/login" element={<LoginView/>}/>
         <Route path="/usuarios" element={<UsuariosIndex/>}/>
         <Route path="/usuarios/create" element={<CreateUsuario/>}/>
-        <Route path="/usuarios/update"> 
+        <Route
         
-          <Route path=":idUsuario" element={<ActualizarUsuario/>}/>
+          path="/usuarios/update/:idUsuario" element={<ActualizarUsuario/>}
         
-        </Route>
+        />
+
+        <Route
+        
+        path="/usuarios/delete/:idUsuario" element={<EliminarUsuario/>}
+      
+      />
+
 
       </Routes>  
       

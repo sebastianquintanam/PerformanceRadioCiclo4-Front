@@ -1,6 +1,10 @@
+import { useParams } from "react-router-dom";
+import { getUsuario } from "../../assets/js/getData";
 import { Link } from "react-router-dom";
 
-function CreateUsuario(props) {
+function EliminarUsuario(props) {
+    let { idUsuario } = useParams();
+    let usuario = getUsuario(idUsuario);
     return (
       <div className="col-12 w-75 mx-auto">
         <div id="breadcrumbs" className="breadcrumbs">
@@ -11,14 +15,28 @@ function CreateUsuario(props) {
               </li>
               <li>Administración</li>
             </ol>
-            <h2>Crear Usuario</h2>
-            <p>Aqui podrás crear locutores y usuarios</p>
+            <h2>Eliminar Usuario</h2>
+            <p>Aquí podrás actualizar locutores y usuarios</p>
             <img src={require("../../assets/img/logo/user2.png")} alt="" />
           </div>
         </div>
-        {/* <h3>Pagina: Crear Usuario</h3> */}
+        <h3>Pagina: Actualizar Usuario</h3>
         <form>
           <div class="row g-3">
+            <div class="">
+              <label for="identifier" class="form-label">
+                Id
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                id="identifier"
+                defaultValue={usuario.id}
+                required={true}
+                readOnly={true}
+              />
+            </div>
+
             <div class="">
               <label for="firstName" class="form-label">
                 Nombre
@@ -28,8 +46,10 @@ function CreateUsuario(props) {
                 class="form-control"
                 id="firstName"
                 placeholder="Nombre de la persona"
-                defaultValue=""
+                defaultValue={usuario.firstName}
                 required={true}
+                readOnly={true}
+
                 minLength={4}
               />
             </div>
@@ -45,8 +65,10 @@ function CreateUsuario(props) {
                   class="form-control"
                   id="username"
                   placeholder="Username"
-                  defaultValue=""
+                  defaultValue={usuario.username}
                   required={true}
+                  readOnly={true}
+
                   minLength={4}
                 />
               </div>
@@ -61,36 +83,29 @@ function CreateUsuario(props) {
                 class="form-control"
                 id="email"
                 placeholder="ejemplo@dominio.com"
-                defaultValue=""
+                defaultValue={usuario.email}
                 required={true}
+                readOnly={true}
+
               />
             </div>
 
             <div class="col-12">
               <label for="password" class="form-label">
-                Contraseña:
+                Contraseña
               </label>
               <input
                 type={"password"}
                 class="form-control"
                 id="password"
-                defaultValue=""
+                defaultValue={usuario.password}
                 required={true}
+                readOnly={true}
+
               />
             </div>
 
-            <div class="col-12">
-              <label for="password2" class="form-label">
-                Repita la Contraseña:
-              </label>
-              <input
-                type={"password"}
-                class="form-control"
-                id="password2"
-                defaultValue=""
-                required={true}
-              />
-            </div>
+
 
             <hr class="my-4" />
 
@@ -99,7 +114,7 @@ function CreateUsuario(props) {
               type="submit"
               onClick={onClickSubmit}
             >
-              Crear
+              Eliminar
             </button>
           </div>
           <br />
@@ -112,4 +127,4 @@ function onClickSubmit(e) {
     console.log(e);
 }
 
-export default CreateUsuario;
+export default EliminarUsuario;

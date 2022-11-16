@@ -1,9 +1,10 @@
 import Table from "../../components/table/Table";
-import getData from "../../assets/js/getData";
 import MainPage from "../../components/table/MainPage";
 import CreateButton from "../../components/table/CreateBotton";
 import SearchBar from "../../components/table/SearchBar";
 import { Link } from "react-router-dom";
+import getUsuario from "../../assets/js/getData"
+import {getData} from "../../assets/js/getData";
 
 let objCss = {
     border: "6px solid red",
