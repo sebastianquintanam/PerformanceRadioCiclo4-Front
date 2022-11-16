@@ -29,6 +29,9 @@ import Contacto from './components/Contacto';
 import UsuariosIndex from './components/usuarios';
 import PlayBtn from './assets/js/playbtn';
 import LoginView from './components/usuarios/login';
+import CreateUsuario from './components/usuarios/createUsuario';
+import ActualizarUsuario from './components/usuarios/actualizarUsuario';
+
 function App() {
 
   return (
@@ -45,6 +48,12 @@ function App() {
         <Route path="/usuarios" element={<UsuariosIndex/>}/>
         <Route path="/login" element={<LoginView/>}/>
         <Route path="/usuarios" element={<UsuariosIndex/>}/>
+        <Route path="/usuarios/create" element={<CreateUsuario/>}/>
+        <Route path="/usuarios/update"> 
+        
+          <Route path=":idUsuario" element={<ActualizarUsuario/>}/>
+        
+        </Route>
 
       </Routes>  
       
