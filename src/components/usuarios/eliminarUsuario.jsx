@@ -6,6 +6,7 @@ import { estadoPrincipal, setEstadoPrincipal } from '../../assets/js/global';
 function EliminarUsuario(props) {
     let { idUsuario } = useParams();
     let usuario = getUsuario(idUsuario);
+    //para crear token: 
     setEstadoPrincipal({
       name: "N/A" + estadoPrincipal.name,
       authenticated: false,
