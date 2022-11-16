@@ -110,7 +110,7 @@ function EliminarUsuario(props) {
             <hr class="my-4" />
 
             <button
-              class="w-100 btn btn-primary btn-lg"
+              class="w-100 btn btn-outline-danger btn-lg"
               type="submit"
               onClick={onClickSubmit}
             >
@@ -124,6 +124,7 @@ function EliminarUsuario(props) {
 }
 
 function onClickSubmit(e) {
+  e.preventDefault();
     console.log(e);
 }
 
