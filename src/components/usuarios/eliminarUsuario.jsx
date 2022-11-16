@@ -1,10 +1,16 @@
 import { useParams } from "react-router-dom";
 import { getUsuario } from "../../assets/js/getData";
 import { Link } from "react-router-dom";
+import { estadoPrincipal, setEstadoPrincipal } from '../../assets/js/global';
 
 function EliminarUsuario(props) {
     let { idUsuario } = useParams();
     let usuario = getUsuario(idUsuario);
+    setEstadoPrincipal({
+      name: "N/A" + estadoPrincipal.name,
+      authenticated: false,
+  });
+  
     return (
       <div className="col-12 w-75 mx-auto">
         <div id="breadcrumbs" className="breadcrumbs">
@@ -20,7 +26,7 @@ function EliminarUsuario(props) {
             <img src={require("../../assets/img/logo/user2.png")} alt="" />
           </div>
         </div>
-        <h3>Pagina: Actualizar Usuario</h3>
+        {/* <h3>Pagina: Actualizar Usuario</h3> */}
         <form>
           <div class="row g-3">
             <div class="">

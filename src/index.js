@@ -15,6 +15,12 @@ import './assets/vendor/swiper/swiper-bundle.min.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import { estadoPrincipal, setEstadoPrincipal } from './assets/js/global';
+
+setEstadoPrincipal({
+  name: "N/A",
+  auhtenticated: false,
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
