@@ -13,7 +13,7 @@ function Navbar(props){
 
             <a href="#hero" className="logo me-auto me-lg-0"><img src={require("../../assets/img/logo/logo3.png")} alt="" className="img-fluid"/></a>
       
-            <nav id="navbar" className="navbar order-last order-lg-0">
+            <nav id="navbar" className="navbar order-last order-lg-0 navbar-fixed-top">
               <ul>
                 <li><Link to="/" className="nav-link scrollto active" href="#hero">Inicio</Link></li>
                 <li><Link to={"/acerca"} className="nav-link scrollto" href="#about">Acerca de</Link></li>
