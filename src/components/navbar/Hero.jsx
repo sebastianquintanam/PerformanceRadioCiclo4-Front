@@ -1,12 +1,43 @@
 import ReactPlayer from 'react-player'
 import React from 'react';
-//import '../../assets/js/playbtn';
+import '../../assets/js/playbtn';
 //
+import ToggleButton from 'react-bootstrap/ToggleButton'
 
+
+<link rel="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"/>
 
 function Hero(props){
+
+  function playbtn(){
+    const audio = document.getElementById("audio");
+    const playPause = document.getElementById("play");
+    // alert("hola");
+   
+      if (audio.paused || audio.ended) {
+        // document.getElementById("playbtnpause").classList.toggle("none");
+        // document.getElementById("playbtnplay").classList.toggle("hide");
+        audio.play();
+        playPause.querySelector(".pause-btn").classList.toggle("hide");
+        playPause.querySelector(".play-btn").classList.toggle("hide");
+        // document.getElementById("playbtnplay").className="fas fa-pause pause-btn img-fluid";
+
+       
+      } else {
+        audio.pause();
+        // document.getElementById("playbtnplay").className="fas fa-play play-btn img-fluid";
+
+        // document.getElementById("playbtnpause").classList.toggle("hide");
+        // document.getElementById("playbtnplay").classList.toggle("none");
+        playPause.querySelector(".pause-btn").classList.toggle("hide");
+        playPause.querySelector(".play-btn").classList.toggle("hide");
+      }
+
+    
+  }
   // this.audio = React.createRef();
     return(
+
         <section id="hero">
     
     <div className="hero-container img-fluid">
@@ -43,9 +74,9 @@ function Hero(props){
                 <div className="end img-fluid">04:30</div>
               </div>
          
-              <audio className="player__audio img-fluid" controls id = {"audio"}>
+              <audio className="player__audio img-fluid" controls id = "audio">
                 
-                <source src="https://cp9.serverse.com/proxy/perfor?mp=/stream;" type="audio/mpeg" />
+                  <source src="https://cp9.serverse.com/proxy/perfor?mp=/stream;" type="audio/mpeg" />
                 </audio>
          
          <div className="player__controls img-fluid">
@@ -53,9 +84,9 @@ function Hero(props){
              <i className="fas fa-backward img-fluid"></i>
            </div>
     
-           <div className="player__btn player__btn--medium blue play img-fluid" id={"play"} >
-             <i className="fas fa-play play-btn img-fluid"></i>
-             <i className="fas fa-pause pause-btn hide img-fluid"></i>
+           <div className="player__btn player__btn--medium blue play img-fluid" onClick={playbtn} id="play" >
+             <i className="fas fa-play play-btn img-fluid" ></i>
+             <i className="fas fa-pause pause-btn hide img-fluid" ></i>
            </div>
     
            <div className="player__btn player__btn--medium img-fluid" id="forward">
