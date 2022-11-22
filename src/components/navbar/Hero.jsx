@@ -3,6 +3,8 @@ import React from 'react';
 import '../../assets/js/playbtn';
 //
 import ToggleButton from 'react-bootstrap/ToggleButton'
+import { IconName } from "react-icons/fa";
+import { FaPause, FaForward, FaBackward } from "react-icons/fa";
 
 
 <link rel="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"/>
@@ -81,16 +83,16 @@ function Hero(props){
          
          <div className="player__controls img-fluid">
            <div className="player__btn player__btn--medium img-fluid" id="backward">
-             <i className="fas fa-backward img-fluid"></i>
+             <FaBackward className="fas fa-backward img-fluid"></FaBackward>
            </div>
     
            <div className="player__btn player__btn--medium blue play img-fluid" onClick={playbtn} id="play" >
              <i className="fas fa-play play-btn img-fluid" ></i>
-             <i className="fas fa-pause pause-btn hide img-fluid" ></i>
+             <FaPause className="fas pause-btn hide img-fluid" ></FaPause>
            </div>
     
            <div className="player__btn player__btn--medium img-fluid" id="forward">
-             <i className="fas fa-forward img-fluid"></i>
+             <FaForward className="fas fa-forward img-fluid"></FaForward>
            </div>
          </div>
        </div>

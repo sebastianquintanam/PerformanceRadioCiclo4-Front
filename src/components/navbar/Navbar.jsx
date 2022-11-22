@@ -8,7 +8,8 @@ function Navbar(props){
   function barra() {
     // window.addEventListener('scroll');
 
-  
+    "use strict";
+
   
       var vid = document.getElementById("myVideo"); 
   

@@ -1,5 +1,6 @@
 function Cuentas(props){
     return(
+     
         <section id="counts" className="counts">
         <div className="container">
   

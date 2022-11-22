@@ -1,7 +1,13 @@
+import { FaWhatsapp } from "react-icons/fa";
+
 function Footer(props){
     return(
         <footer id="footer">
-        <a href="https://chat.whatsapp.com/KWg4GAgxnV47D0sbwNWuGa?text=Hola,Deseo%20solicitar%20una%20canción%20" className="whatsapp" target="_blank"> <i className="fa fa-whatsapp whatsapp-icon"></i></a>
+          <div>
+            <a href="https://chat.whatsapp.com/KWg4GAgxnV47D0sbwNWuGa?text=Hola,Deseo%20solicitar%20una%20canción%20" className="whatsapp" target="_blank"> 
+              <FaWhatsapp className="fa fa-whatsapp whatsapp-icon"></FaWhatsapp>
+            </a>
+        </div>
     
         <div className="footer-top">
     
