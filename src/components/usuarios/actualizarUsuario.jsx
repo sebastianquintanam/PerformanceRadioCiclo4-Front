@@ -21,7 +21,7 @@ function ActualizarUsuario(props) {
           </div>
         </div>
         {/* <h3>Pagina: Actualizar Usuario</h3> */}
-        <form></form>
+        <form>
           <div class="row g-3">
             <div class="">
               <label for="identifier" class="form-label">
