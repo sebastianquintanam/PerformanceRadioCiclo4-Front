@@ -8,7 +8,7 @@ function CreateButton(props) {
     let url = props.path + "/create";
     return (
         <Link to={url}>
-            <button  style={objCss} className="btn btn-success ms-5">Crear</button>
+            <button className="btn btn-success ms-5">Crear</button>
         </Link>
     );
 }

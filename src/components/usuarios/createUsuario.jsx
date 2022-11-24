@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
+import { getRequest } from "../../assets/js/getData";
+import backendConfig from "../../config";
+import { useNavigate } from "react-router-dom";
 
 function CreateUsuario(props) {
+  let navigate = useNavigate();
+
     return (
       <div className="col-12 w-75 mx-auto">
         <div id="breadcrumbs" className="breadcrumbs">
@@ -108,8 +113,36 @@ function CreateUsuario(props) {
     );
 }
 
-function onClickSubmit(e) {
-    console.log(e);
+function onClickSubmit(navigate) {
+  //capturamos los datos del formulario
+  let firstName = document.getElementById("firstName").value;
+  let username = document.getElementById("username").value;
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+  //contruimos la peticion
+  //construimos el body
+  let bodyData = {
+      firstName,
+      username,
+      email,
+      password,
+  };
+  let url = backendConfig.FULL_API_PATH + "usuarios/create";
+  let promesaCreate = getRequest(url, {}, "post", bodyData);
+  //enviamos la peticion
+  promesaCreate
+      .then(function (res) {
+          if (res.status < 300) {
+              //redireccionar
+              console.log("Usuario creado");
+              navigate("/usuarios");
+          }
+          console.log(res);
+      })
+      .catch(function (err) {
+          console.log(err);
+      });
+  //segun el resultado, mostramos errores O cargamos la pagina de usuarios
 }
 
 export default CreateUsuario;

@@ -22,23 +22,9 @@ setEstadoPrincipal({
   auhtenticated: false,
 });
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-
-// const audio = React.cloneElement(document.getElementById("audio"));
-// const playPause = React.cloneElement(document.getElementById("play"));
-
-// playPause.addEventListener("click", () => {
-//   if (audio.paused || audio.ended) {
-//     playPause.querySelector(".pause-btn").classList.toggle("hide");
-//     playPause.querySelector(".play-btn").classList.toggle("hide");
-//     audio.play();
-//   } else {
-//     audio.pause();
-//     playPause.querySelector(".pause-btn").classList.toggle("hide");
-//     playPause.querySelector(".play-btn").classList.toggle("hide");
-//   }
-// });
 
 root.render(
   <BrowserRouter>
