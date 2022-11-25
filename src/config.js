@@ -6,7 +6,7 @@
 // let FULL_API_PATH = PROTOCOL + "://" + HOST + ":" + PORT + API_ROUTE;
 
 let PORT = 80;
-let HOST = "backendproyecto-nigth.vercel.app";
+let HOST = "performance-radio-ciclo4-back.vercel.app";
 let PROTOCOL = "https";
 let API_ROUTE = "/api/";
 let FULL_PATH = PROTOCOL + "://" + HOST + ":" + PORT + "/";
