@@ -260,7 +260,7 @@ function Equipo(props){
             <div className="col-lg-3 col-md-6 d-flex align-items-stretch">
               <div className="member">
                 <div className="member-img">
-                  <img src={require("../assets/img/team/team-4.jpg")} className="img-fluid" alt=""/>
+                  <img src={require("../assets/img/team/team-5.jpg")} className="img-fluid" alt=""/>
                   <div className="social">
                     <a href=""><i className="bi bi-twitter"></i></a>
                     <a href=""><i className="bi bi-facebook"></i></a>
